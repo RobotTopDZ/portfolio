@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import ChevronRight from '../components/icons/ChevronRight';
 import styles from '../styles/Explorer.module.css';
+import asset from '../lib/asset';
 
 const explorerItems = [
   {
@@ -66,7 +67,7 @@ const Explorer = ({ isOpen = true }) => {
             <Link href={item.path} key={item.name}>
               <div className={styles.file}>
                 <Image
-                  src={`/${item.icon}`}
+                  src={asset(`/${item.icon}`)}
                   alt={item.name}
                   height={18}
                   width={18}

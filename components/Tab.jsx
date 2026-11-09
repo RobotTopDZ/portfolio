@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState, useRef, useEffect } from 'react';
 import styles from '../styles/Tab.module.css';
+import asset from '../lib/asset';
 
 const Tab = ({ icon, filename, path, index, isDragging, isDragOver, onDragStart, onDragOver, onDragEnd }) => {
   const router = useRouter();
@@ -66,7 +67,7 @@ const Tab = ({ icon, filename, path, index, isDragging, isDragOver, onDragStart,
       <div
         className={`${styles.tab} ${isActive && styles.active}`}
       >
-        <Image src={icon} alt={filename} height={18} width={18} />
+        <Image src={asset(icon)} alt={filename} height={18} width={18} />
         <p>{filename}</p>
       </div>
     </div>

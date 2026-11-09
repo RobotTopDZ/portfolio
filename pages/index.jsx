@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import styles from '../styles/HomePage.module.css';
 import experience from '../data/experience.json';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
+import asset from '../lib/asset';
 
 const ParticlesBackground = dynamic(
   () => import('../components/ParticlesBackground'),
@@ -95,7 +96,7 @@ export default function HomePage({ experience }) {
             <div className={styles.imageWrapper}>
               <Image
                 className={styles.profileImage}
-                src="/oussama.jpg"
+                src={asset('/oussama.jpg')}
                 width={280}
                 height={280}
                 alt="Oussama Khaldi"

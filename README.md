@@ -35,6 +35,7 @@ A settings page (`/settings`) lets visitors switch between eight editor themes.
 components/   UI components (titlebar, sidebar, explorer, tabs, terminal, cards)
 context/      Terminal open/close state
 data/         All site content as JSON (experience, papers, projects)
+lib/          Helpers (asset path prefixing for the basePath)
 pages/        One file per route
 public/       Images, icons, CV and theme previews
 styles/       CSS Modules and theme definitions
@@ -61,13 +62,14 @@ Requires Node.js 22.
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # production build
-npm run export   # static export to ./out
+npm run build    # static export to ./out (served under /portfolio)
 ```
 
 ## Deployment
 
-The easiest option is [Vercel](https://vercel.com/new): import this repository and keep the default Next.js settings.
+The site is deployed to GitHub Pages at **https://robottopdz.github.io/portfolio/** by the workflow in `.github/workflows/nextjs.yml`, which builds and publishes `./out` on every push to `main`.
+
+Production builds use `basePath: '/portfolio'` (see `next.config.js`). Files in `public/` must be referenced through `lib/asset.js` (e.g. `asset('/oussama.jpg')`) so they get that prefix; `next/link` handles page links automatically. If the repository is renamed, update `basePath` in `next.config.js`.
 
 ## License
 

@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import styles from '../styles/ResumePage.module.css';
 import { pdfjs, Document, Page } from 'react-pdf'
+import asset from '../lib/asset';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
-const myResume = './CV_Oussama_Khaldi.pdf';
+const myResume = asset('/CV_Oussama_Khaldi.pdf');
 
 const ResumePage = () => {
   const [numPages, setNumPages] = useState(null);

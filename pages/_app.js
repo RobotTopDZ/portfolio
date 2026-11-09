@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import Head from "../components/Head";
 import "../styles/globals.css";
 import "../styles/themes.css";
-import { Analytics } from '@vercel/analytics/react';
 import { TerminalProvider } from '../context/TerminalContext';
 
 function MyApp({ Component, pageProps }) {
@@ -22,7 +21,6 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Head title={`Oussama Khaldi | ${pageProps.title}`} />
         <Component {...pageProps} />
-        <Analytics />
       </Layout>
     </TerminalProvider>
   );

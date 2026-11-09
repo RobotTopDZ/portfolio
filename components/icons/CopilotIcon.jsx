@@ -1,7 +1,9 @@
+import asset from '../../lib/asset';
+
 export default function CopilotIcon({ size = 18, className }) {
   return (
     <img
-      src="/icons/copilot.png"
+      src={asset('/icons/copilot.png')}
       alt="GitHub Copilot"
       width={size}
       height={size}

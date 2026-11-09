@@ -6,6 +6,7 @@ import { useTerminal } from '../context/TerminalContext';
 import ClaudeIcon from './icons/ClaudeIcon';
 import ChatGPTIcon from './icons/ChatGPTIcon';
 import CopilotIcon from './icons/CopilotIcon';
+import asset from '../lib/asset';
 
 const WINDOW_MESSAGES = {
   minimize: "I don't minimize problems, I model them.",
@@ -96,7 +97,7 @@ const Titlebar = () => {
   return (
     <section className={styles.titlebar}>
       <Image
-        src="/vscode_icon.svg"
+        src={asset('/vscode_icon.svg')}
         alt="VSCode Icon"
         height={15}
         width={15}

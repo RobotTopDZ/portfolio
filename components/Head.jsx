@@ -1,12 +1,13 @@
 import Head from 'next/head';
+import asset from '../lib/asset';
 
 const CustomHead = ({ title }) => {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="icon" type="image/svg+xml" href="/vscode_icon.svg" />
-      <link rel="alternate icon" type="image/png" href="/vscode_icon.png" />
-      <link rel="apple-touch-icon" href="/vscode_icon.png" />
+      <link rel="icon" type="image/svg+xml" href={asset('/vscode_icon.svg')} />
+      <link rel="alternate icon" type="image/png" href={asset('/vscode_icon.png')} />
+      <link rel="apple-touch-icon" href={asset('/vscode_icon.png')} />
       <meta
         name="description"
         content="Oussama Khaldi's Portfolio — AI R&D Engineer & ML Researcher."
