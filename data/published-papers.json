@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Rethinking Vision Architectures with Gated Linear Attention and KAN",
+    "authors": "A. Mehizel, O. Khaldi",
+    "citations": 0,
+    "year": 2026,
+    "conference": "arXiv preprint arXiv:2609.22506 (cs.CV)",
+    "abstract": "Vision Transformers devote most of their parameters to MLPs for channel mixing, but still rely on quadratic multi-head self-attention for token interactions. While linear attention fixes the complexity problem, bringing it down to O(N), it is usually just paired with the same fixed-activation MLP as before. Kolmogorov-Arnold Networks take a different approach, placing learnable univariate functions on the edges instead. However, existing vision KANs either retain standard attention or remove attention entirely, so the two ideas have not been effectively combined. We introduce LKAT (Linear Kolmogorov-Arnold Transformer) to close this gap: an isotropic ViT-style encoder that couples chunk-wise Gated Linear Attention with a two-layer KAN feed-forward block, backed by an I/O-aware fused RBF-KAN kernel to make radial-basis grid functions efficient in practice. Under a shared DeiT-style training recipe, LKAT-B outperforms ViT-B/16, ViT-5-B, and Mixer-B/16 on ImageNet-100, while Tiny, Small, and Base variants scale consistently on CIFAR-10/100. ImageNet-100 pretraining also transfers effectively to CIFAR fine-tuning, suggesting that gated linear attention and KAN-based radial basis functions provide complementary inductive biases for mid-scale visual representation learning.",
+    "link": "https://arxiv.org/pdf/2609.22506",
+    "page": "https://arxiv.org/abs/2609.22506",
+    "code": "https://github.com/mehizelali/linear-kan-transformer"
+  }
+]

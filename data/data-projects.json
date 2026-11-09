@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Demographic Smoothing (Carrier & Farag)",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/AnalyseDemographique",
+    "description": "Implementation of the Carrier & Farag demographic smoothing technique applied to Afghanistan population data, with a CLI analysis tool and an interactive dashboard.",
+    "tags": ["Python", "Statistics", "Dashboard"],
+    "source_code": "https://github.com/RobotTopDZ/AnalyseDemographique"
+  },
+  {
+    "id": 2,
+    "name": "Ads Conversion Analysis",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/ADs_Conversion_Analysiss",
+    "description": "Exploratory analysis and modeling of advertising campaign data to understand and predict conversion drivers.",
+    "tags": ["Jupyter", "Pandas", "Classification"],
+    "source_code": "https://github.com/RobotTopDZ/ADs_Conversion_Analysiss"
+  },
+  {
+    "id": 3,
+    "name": "Crous Fork Survival × MongoDB",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/crous-survival-game-no-sql-MongoDB-univ-project-",
+    "description": "Browser-based 3D FPS (Three.js) demonstrating real-time NoSQL persistence: every in-game event is written live to MongoDB through a Node.js/Express backend.",
+    "tags": ["Three.js", "Node.js", "MongoDB", "NoSQL"],
+    "source_code": "https://github.com/RobotTopDZ/crous-survival-game-no-sql-MongoDB-univ-project-"
+  }
+]

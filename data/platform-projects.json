@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "CarbonScore",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/CarbonScore",
+    "description": "AI-powered carbon footprint platform for SMEs combining deterministic ADEME Base Carbone v17 calculations with ML insights, prescriptive action plans and professional reporting. Next.js frontend, FastAPI microservices and worker pipelines.",
+    "tags": ["Next.js", "FastAPI", "Machine-Learning", "Sustainability"],
+    "source_code": "https://github.com/RobotTopDZ/CarbonScore"
+  },
+  {
+    "id": 2,
+    "name": "CarbonScore Architecture",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/CarbonScore-architecture",
+    "description": "Interactive architecture diagram of the CarbonScore platform showing its 9 core services, data flows and API endpoints, with zoom/pan and mobile support.",
+    "tags": ["JavaScript", "System-Design", "Microservices"],
+    "source_code": "https://github.com/RobotTopDZ/CarbonScore-architecture"
+  },
+  {
+    "id": 3,
+    "name": "Nautery — Ocean Pollution Monitor",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/nautery-hackathon-",
+    "description": "Hackathon platform for monitoring ocean pollution with real-time data visualization and AI-powered predictions, deployed on Railway.",
+    "tags": ["Next.js", "TypeScript", "AI-Predictions", "Hackathon"],
+    "source_code": "https://github.com/RobotTopDZ/nautery-hackathon-"
+  }
+]

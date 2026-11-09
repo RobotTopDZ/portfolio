@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Medical Chatbot RAG",
+    "image": "https://raw.githubusercontent.com/RobotTopDZ/Medical-Chatbot-rag/HEAD/images/front-page.PNG",
+    "description": "Medical assistant powered by Retrieval-Augmented Generation: retrieves evidence from a curated medical knowledge base and generates grounded, context-aware answers with an LLM.",
+    "tags": ["Python", "RAG", "LLMs", "Vector-Search"],
+    "source_code": "https://github.com/RobotTopDZ/Medical-Chatbot-rag"
+  },
+  {
+    "id": 2,
+    "name": "Smart Real-Estate Platform — Algeria",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/Plateforme-RAG-next.js-analyse-du-marche-immobilier-en-Algerie",
+    "description": "AI real-estate platform for the Algerian market: multi-criteria search engine, a conversational RAG chatbot acting as a real-estate advisor, real-time market analytics and a preference-based recommendation system.",
+    "tags": ["Next.js", "TypeScript", "RAG", "Recommender"],
+    "source_code": "https://github.com/RobotTopDZ/Plateforme-RAG-next.js-analyse-du-marche-immobilier-en-Algerie"
+  },
+  {
+    "id": 3,
+    "name": "NeuraScore — Data Literacy Scores",
+    "image": "https://opengraph.githubassets.com/1/RobotTopDZ/NeuraScore-organizational-Data-Literacy-Scores",
+    "description": "Platform that analyzes user interactions with data catalogs to compute AI-driven Data Literacy Scores per user, team and organization, using ML clustering of behavior patterns and NLP-generated recommendations.",
+    "tags": ["TypeScript", "ML-Clustering", "NLP", "Analytics"],
+    "source_code": "https://github.com/RobotTopDZ/NeuraScore-organizational-Data-Literacy-Scores",
+    "demo": "https://neurascore-organizational-data-literacy-scores-production.up.railway.app/"
+  }
+]

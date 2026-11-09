@@ -1,0 +1,150 @@
+import { useState } from 'react';
+import papers from '../data/published-papers.json';
+import styles from '../styles/PapersPage.module.css';
+
+// Citations are disabled for now. Set to true to re-enable the citation
+// badges and the "Sort by: Citations" option.
+const SHOW_CITATIONS = false;
+
+const PapersPage = ({ papers }) => {
+  const [sortBy, setSortBy] = useState(SHOW_CITATIONS ? 'citations' : 'date');
+  const [expandedPapers, setExpandedPapers] = useState(new Set());
+
+  const sortedPapers = [...papers].sort((a, b) => {
+    if (sortBy === 'citations') {
+      if (b.citations === a.citations) {
+        return b.year - a.year;
+      }
+      return b.citations - a.citations;
+    }
+    if (b.year === a.year) {
+      return b.citations - a.citations;
+    }
+    return b.year - a.year;
+  });
+
+  const toggleExpanded = (paperId) => {
+    const newExpanded = new Set(expandedPapers);
+    if (newExpanded.has(paperId)) {
+      newExpanded.delete(paperId);
+    } else {
+      newExpanded.add(paperId);
+    }
+    setExpandedPapers(newExpanded);
+  };
+
+  const truncateText = (text, maxLength = 200) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + '...';
+  };
+
+  return (
+    <div className={styles.pageWrapper}>
+      <div className={styles.header}>
+        <h3>My Publications</h3>
+        {SHOW_CITATIONS && (
+          <div className={styles.sortControls}>
+            <span className={styles.sortLabel}>Sort by:</span>
+            <button
+              className={`${styles.sortButton} ${sortBy === 'citations' ? styles.active : ''}`}
+              onClick={() => setSortBy('citations')}
+            >
+              Citations
+            </button>
+            <button
+              className={`${styles.sortButton} ${sortBy === 'date' ? styles.active : ''}`}
+              onClick={() => setSortBy('date')}
+            >
+              Date
+            </button>
+          </div>
+        )}
+      </div>
+
+      <div className={styles.container}>
+        {sortedPapers.map((paper) => {
+          const isExpanded = expandedPapers.has(paper.id);
+          const isLongAbstract = paper.abstract.length > 200;
+
+          return (
+            <div key={paper.id} className={styles.card}>
+              <div className={styles.cardTop}>
+                <div className={styles.cardHeader}>
+                  <h3>{paper.title}</h3>
+                  {SHOW_CITATIONS && paper.citations > 0 && (
+                    <div className={styles.citationBadge}>{paper.citations}</div>
+                  )}
+                </div>
+
+                {paper.authors && (
+                  <div className={styles.authors}>
+                    <span className={styles.metadataLabel}>Authors:</span>
+                    <span className={styles.metadataValue}>{paper.authors}</span>
+                  </div>
+                )}
+
+                <div className={styles.abstract}>
+                  {isExpanded || !isLongAbstract
+                    ? paper.abstract
+                    : truncateText(paper.abstract)}
+                  {isLongAbstract && (
+                    <button
+                      className={styles.expandButton}
+                      onClick={() => toggleExpanded(paper.id)}
+                    >
+                      {isExpanded ? 'Show less' : 'Read more'}
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              <div className={styles.cardBottom}>
+                <div className={styles.metadata}>
+                  <div className={styles.metadataItem}>
+                    <span className={styles.metadataLabel}>Venue:</span>
+                    <span className={styles.metadataValue}>{paper.conference}</span>
+                  </div>
+                  <div className={styles.metadataItem}>
+                    <span className={styles.metadataLabel}>Year:</span>
+                    <span className={styles.metadataValue}>{paper.year}</span>
+                  </div>
+                </div>
+
+                <div className={styles.links}>
+                  {paper.code && (
+                    <a
+                      href={paper.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.readLink}
+                      title="Source code"
+                    >
+                      Code →
+                    </a>
+                  )}
+                  <a
+                    href={paper.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.readLink}
+                    title="Read full paper"
+                  >
+                    PDF →
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export async function getStaticProps() {
+  return {
+    props: { title: 'Papers', papers },
+  };
+}
+
+export default PapersPage;

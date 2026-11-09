@@ -1,0 +1,42 @@
+[
+  {
+    "id": "atidgo",
+    "title": "AI R&D Engineer (prev. AI Engineer Intern)",
+    "company": "Atidgo",
+    "location": "Marseille, FR",
+    "period": "Dec 2025 - Present",
+    "description": "Leading development of DUFI, an AI-powered WhatsApp ordering assistant combining multilingual LLM orchestration, voice processing, APIs and backend services. Designed and trained demand-forecasting models using historical sales, weather and event-based features, improving forecasting accuracy by 20% over baseline. Built production AI workflows mixing optimization algorithms and predictive models for automated inventory and ordering recommendations, with deployment, monitoring and iterative evaluation in production."
+  },
+  {
+    "id": "dzdigitalservices",
+    "title": "Founder & AI Systems Engineer",
+    "company": "DZDigitalServices",
+    "location": "Remote",
+    "period": "Mar 2024 - Jun 2025",
+    "description": "Built and deployed AI automation systems and LLM-powered workflows for 80+ clients across e-commerce, marketing and digital operations. Developed custom GPT-based assistants, data extraction pipelines and automation tools integrating APIs and external services, managing projects end-to-end from data processing to deployment and client delivery."
+  },
+  {
+    "id": "sense-conseil",
+    "title": "Data Science Intern",
+    "company": "Sense Conseil",
+    "location": "Algiers, DZ",
+    "period": "May 2025 - Jun 2025",
+    "description": "Built BI dashboards and analytics pipelines that reduced manual reporting workload by 60%. Performed customer behavior analysis and delivered data-driven optimization recommendations contributing to an 8% increase in conversion rate."
+  },
+  {
+    "id": "yassir",
+    "title": "Marketing Analyst & Data Scientist Intern",
+    "company": "Yassir",
+    "location": "Algiers, DZ",
+    "period": "",
+    "description": "Analyzed marketing campaign performance and customer data to surface trends and insights, segmented users to support targeting, built dashboards to track key marketing KPIs, and delivered data-driven recommendations to the marketing team."
+  },
+  {
+    "id": "hackathons",
+    "title": "Participant & Award Winner",
+    "company": "AI & Data Hackathons",
+    "location": "FR / DZ",
+    "period": "2024 - Present",
+    "description": "1st Place: AIM Agentic AI Hackathon (France), Algeria Data Cup, Snypson, AICamp. 2nd Place: Yassir AI Hackathon, GDG AI Fest."
+  }
+]

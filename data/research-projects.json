@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "LKAT — Linear Kolmogorov-Arnold Transformer",
+    "image": "https://opengraph.githubassets.com/1/mehizelali/linear-kan-transformer",
+    "description": "Official code of the paper 'Rethinking Vision Architectures with Gated Linear Attention and KAN'. An isotropic ViT-style encoder coupling chunk-wise Gated Linear Attention (O(N)) with KAN feed-forward blocks and a fused RBF-KAN kernel. Outperforms ViT-B/16 and Mixer-B/16 on ImageNet-100.",
+    "tags": ["PyTorch", "Vision-Transformers", "KAN", "Linear-Attention"],
+    "source_code": "https://github.com/mehizelali/linear-kan-transformer",
+    "scholar": "https://arxiv.org/abs/2609.22506"
+  }
+]
